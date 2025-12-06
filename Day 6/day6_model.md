@@ -24,20 +24,23 @@ $$
 $$
 
 *   $p_s$: Average profitability
-*   $ costs$: Origination and selling cost rates
+*   $costs$: Origination and selling cost rates
 
 ## 3. Formulate Key Constraints
 
 I think these are the three most critical constraints to enforce right now:
 
 **A. Regulatory Risk Limit:** The risk-weighted assets cannot exceed 50% of the total exposure.
-$$ \sum_{s} w_s x_s \le 0.50 \sum_{s} x_s $$
+
+$$\sum_{s} w_s x_s \le 0.50 \sum_{s} x_s $$
 
 **B. Growth Cap:** I don't think we should grow the total portfolio by more than 20% in a single quarter.
-$$ \sum_{s} x_s \le 1.20 \sum_{s} E_s $$
+
+$$\sum_{s} x_s \le 1.20 \sum_{s} E_s $$
 
 **C. Asset-Level Guardrails:** For any specific asset type (like "Consumer Loans"), we shouldn't deviate too wildly from the current allocation.
-$$ (1 - d_a) E_a \le \sum_{s \in S(a)} x_s \le (1 + u_a) E_a $$
+
+$$(1 - d_a) E_a \le \sum_{s \in S(a)} x_s \le (1 + u_a) E_a $$
 
 ## 4. List Model Assumptions
 
