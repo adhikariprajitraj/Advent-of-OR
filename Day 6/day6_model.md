@@ -19,7 +19,7 @@ Where:
 
 ## 2. Objective Function
 
-My goal here is simple: **Maximize the total portfolio profit net of transaction costs.**
+The goal here is **Maximize the total portfolio profit net of transaction costs.**
 I think we just sum up the expected profit from the target positions and subtract the costs of getting there.
 
 $$
