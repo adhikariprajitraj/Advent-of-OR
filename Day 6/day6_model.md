@@ -2,7 +2,7 @@
 
 To get this optimizations process started, I think we need to focus on just the essential moving parts. Here is how I set up the initial model.
 
-## 1. Define the Decision Variables
+## 1. Decision Variables
 
 For the primary decision, I believe we simply need to determine the **target exposure** for each segment in the coming quarter.
 I'm denoting this as $x_s$ for every segment $s$.
@@ -17,7 +17,7 @@ $$x_s = E_s + b_s - \ell_s$$
 Where:
 *   $E_s$: Current exposure for segment $s$
 
-## 2. Formulate the Objective Function
+## 2. Objective Function
 
 My goal here is simple: **Maximize the total portfolio profit net of transaction costs.**
 I think we just sum up the expected profit from the target positions and subtract the costs of getting there.
@@ -31,7 +31,7 @@ $$
 *   $c^{	ext{orig}}_s$: Cost rate for new originations
 *   $c^{	ext{sell}}_s$: Cost rate for selling loans
 
-## 3. Formulate Key Constraints
+## 3. Constraints
 
 I think these are the three most critical constraints to enforce right now:
 
