@@ -14,6 +14,9 @@ To make the cost calculations easier (linear), I also defined two auxiliary vari
 Basic balance equation:
 $$x_s = E_s + b_s - \ell_s$$
 
+Where:
+*   $E_s$: Current exposure for segment $s$
+
 ## 2. Formulate the Objective Function
 
 My goal here is simple: **Maximize the total portfolio profit net of transaction costs.**
@@ -23,8 +26,10 @@ $$
 \max \sum_{s \in S} \left( p_s x_s  - c^{	ext{orig}}_s b_s - c^{	ext{sell}}_s \ell_s \right)
 $$
 
-*   $p_s$: Average profitability
-*   $ costs$: Origination and selling cost rates
+
+*   $p_s$: Expected return (profitability)
+*   $c^{	ext{orig}}_s$: Cost rate for new originations
+*   $c^{	ext{sell}}_s$: Cost rate for selling loans
 
 ## 3. Formulate Key Constraints
 
@@ -32,12 +37,17 @@ I think these are the three most critical constraints to enforce right now:
 
 **A. Regulatory Risk Limit:** The risk-weighted assets cannot exceed 50% of the total exposure.
 $$ \sum_{s} w_s x_s \le 0.50 \sum_{s} x_s $$
+Where $w_s$ is the risk weight for segment $s$.
 
 **B. Growth Cap:** I don't think we should grow the total portfolio by more than 20% in a single quarter.
 $$ \sum_{s} x_s \le 1.20 \sum_{s} E_s $$
 
 **C. Asset-Level Guardrails:** For any specific asset type (like "Consumer Loans"), we shouldn't deviate too wildly from the current allocation.
 $$ (1 - d_a) E_a \le \sum_{s \in S(a)} x_s \le (1 + u_a) E_a $$
+Where:
+*   $d_a, u_a$: Allowed decrease/increase percentage for asset $a$
+*   $E_a$: Current total exposure for asset $a$
+*   $S(a)$: Set of segments belonging to asset type $a$
 
 ## 4. List Model Assumptions
 
