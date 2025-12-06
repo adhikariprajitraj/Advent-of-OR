@@ -36,7 +36,9 @@ $$
 I think these are the three most critical constraints to enforce right now:
 
 **A. Regulatory Risk Limit:** The risk-weighted assets cannot exceed 50% of the total exposure.
+
 $$ \sum_{s} w_s x_s \le 0.50 \sum_{s} x_s $$
+
 Where $w_s$ is the risk weight for segment $s$.
 
 **B. Growth Cap:** I don't think we should grow the total portfolio by more than 20% in a single quarter.
@@ -44,7 +46,9 @@ Where $w_s$ is the risk weight for segment $s$.
 $$\sum_{s} x_s \le 1.20 \sum_{s} E_s $$
 
 **C. Asset-Level Guardrails:** For any specific asset type (like "Consumer Loans"), we shouldn't deviate too wildly from the current allocation.
+
 $$ (1 - d_a) E_a \le \sum_{s \in S(a)} x_s \le (1 + u_a) E_a $$
+
 Where:
 *   $d_a, u_a$: Allowed decrease/increase percentage for asset $a$
 *   $E_a$: Current total exposure for asset $a$
