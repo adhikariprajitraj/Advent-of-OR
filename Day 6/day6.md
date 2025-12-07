@@ -36,13 +36,7 @@ Where $E_{ij}$ is the current exposure.
 The goal is to **maximize expected profit minus origination and selling costs**:
 
 $$
-\max 
-\sum_{i=1}^{18} \sum_{j=1}^{4}
-\left(
-p_{ij} x_{ij}
-- c^{\text{orig}}_{ij} b_{ij}
-- c^{\text{sell}}_{ij} \ell_{ij}
-\right)
+\max \sum_{i=1}^{18} \sum_{j=1}^{4} \left(p_{ij} x_{ij} - c^{\text{orig}}_{ij} b_{ij}- c^{\text{sell}}_{ij} \ell_{ij}\right)
 $$
 
 Where:
