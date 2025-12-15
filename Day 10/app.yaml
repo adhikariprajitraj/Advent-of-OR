@@ -1,0 +1,4 @@
+type: python
+runtime: python:3.10
+execution:
+  entrypoint: app1.py

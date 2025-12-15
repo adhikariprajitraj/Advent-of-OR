@@ -1,0 +1,33 @@
+{
+  "description": "Local run created at 2025-12-13T16:50:27.454446Z",
+  "id": "local-53qj0zpx",
+  "metadata": {
+    "application_id": "",
+    "application_instance_id": "",
+    "application_version_id": "",
+    "created_at": "2025-12-13T16:50:27.454446Z",
+    "duration": 7180.0,
+    "error": "",
+    "input_size": 13161.0,
+    "output_size": 0.0,
+    "format": {
+      "input": {
+        "type": "multi-file"
+      },
+      "output": {
+        "type": "multi-file"
+      }
+    },
+    "status_v2": "succeeded"
+  },
+  "name": "local run local-53qj0zpx",
+  "user_email": "",
+  "console_url": "",
+  "synced_runs": [
+    {
+      "run_id": "devint-RsK1MoMDR",
+      "synced_at": "2025-12-13T17:31:32.122482Z",
+      "app_id": "gams-portfolio-rebalancing"
+    }
+  ]
+}

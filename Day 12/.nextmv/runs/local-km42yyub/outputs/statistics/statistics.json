@@ -1,0 +1,19 @@
+{
+  "statistics": {
+    "result": {
+      "duration": 0.29300032183527946,
+      "value": 581421.7128272603,
+      "custom": {
+        "optimized_exposure": 3795181.14483685,
+        "model_status": 1,
+        "num_variables": 237.0,
+        "num_constraints": 130.0,
+        "objective_type": "objective_2",
+        "covariance": 156934705738.92725,
+        "max_possible_profit": 726777.1410340753,
+        "target": 0.8
+      }
+    },
+    "schema": "v1"
+  }
+}

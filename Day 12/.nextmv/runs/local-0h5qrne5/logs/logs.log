@@ -1,0 +1,216 @@
+
+=== Stage 1: Maximizing Net Profit ===
+--- Job _DlL5TQeRRDG2mMOHWl587A.gms Start 12/13/25 22:36:10 52.2.0 d8e408be WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\Users\USER\AppData\Local\Programs\Python\Python310\Lib\site-packages\gamspy_base\gmsprmNT.txt
+--- GAMS Parameters defined
+    LP xpress
+    Input C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\_DlL5TQeRRDG2mMOHWl587A.gms
+    Output C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\_DlL5TQeRRDG2mMOHWl587A.lst
+    ScrDir C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\tmpimx0gziy\
+    SysDir C:\Users\USER\AppData\Local\Programs\Python\Python310\Lib\site-packages\gamspy_base\
+    LogOption 3
+    Trace C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\_DlL5TQeRRDG2mMOHWl587A.txt
+    License C:\Users\USER\AppData\Local\Programs\Python\Python310\Lib\site-packages\gamspy_base\gamslice.txt
+    OptFile 0
+    OptDir C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\
+    LimRow 0
+    LimCol 0
+    TraceOpt 3
+    GDX C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\_DlL5TQeRRDG2mMOHWl587Aout.gdx
+    SolPrint 0
+    SolveLink 2
+    PreviousWork 1
+    gdxSymbols newOrChanged
+System information: 10 physical cores and 16 Gb physical memory detected
+--- Starting compilation
+--- _DlL5TQeRRDG2mMOHWl587A.gms(71) 4 Mb
+--- Starting execution: elapsed 0:00:00.051
+--- Generating LP model max_net_profit
+--- _DlL5TQeRRDG2mMOHWl587A.gms(356) 4 Mb
+---   129 rows  236 columns  651 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 1.000E+00, 4.276E+05] - Zero values observed as well
+--- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+--- Matrix    [min, max] : [ 5.000E-01, 9.972E+04]
+--- Executing XPRESS (Solvelink=2): elapsed 0:00:00.094
+
+    Xpress           52.2.0 d8e408be Dec 8, 2025           WEI x86 64bit/MS Window
+
+... This solver runs with a demo license. No commercial use.
+
+    FICO Xpress v9.8.0, Hyper, solve started 22:36:10, Dec 13, 2025
+    Heap usage: 733KB (peak 733KB, 169KB system)
+    Maximizing LP  using up to 16 threads and up to 15GB memory, with these control settings:
+    MUTEXCALLBACKS = 0
+    MIPADDCUTOFF = 0
+    MIPRELCUTOFF = 0
+    MIPABSSTOP = 0
+    MIPRELSTOP = .0001
+    Original problem has:
+           129 rows          236 cols          651 elements
+    Presolved problem has:
+            92 rows          235 cols          613 elements
+    Presolve finished in 0 seconds
+    Heap usage: 762KB (peak 804KB, 169KB system)
+    Coefficient range                    original                 solved        
+      Coefficients   [min,max] : [ 5.00e-01,  9.97e+04] / [ 6.29e-02,  2.81e+00]
+      RHS and bounds [min,max] : [ 1.00e+00,  4.28e+05] / [ 1.25e-01,  5.22e+01]
+      Objective      [min,max] : [ 1.00e+00,  1.00e+00] / [ 1.02e+03,  1.02e+03]
+    Autoscaling applied Curtis-Reid scaling
+    Starting concurrent solve with dual (1 thread)
+     Concurrent-Solve,   0s
+                Dual        
+        objective   dual inf
+     D  1019924.8   .0000000
+                            
+    ------- optimal --------
+    Concurrent statistics:
+               Dual: 73 simplex iterations, 0.00s
+    Uncrunching matrix
+    Optimal solution found
+     
+       Its         Obj Value      S   Ninf  Nneg   Sum Dual Inf  Time
+        73       1019924.835      D      0     0        .000000     0
+    Dual solved problem
+      73 simplex iterations in 0.00 seconds at time 0
+    Final objective                       : 1.019924835370138e+06
+      Max primal violation      (abs/rel) :       0.0 /       0.0
+      Max dual violation        (abs/rel) :       0.0 /       0.0
+      Max complementarity viol. (abs/rel) :       0.0 /       0.0
+
+... XPRESS stop status: normal (0)
+... XPRESS sol status: optimal (1)
+
+--- Reading solution for model max_net_profit
+--- Executing after solve: elapsed 0:00:00.498
+--- _DlL5TQeRRDG2mMOHWl587A.gms(357) 4 Mb
+--- _DlL5TQeRRDG2mMOHWl587A.gms(415) 4 Mb
+--- GDX File C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\_DlL5TQeRRDG2mMOHWl587Aout.gdx
+*** Status: Normal completion
+--- Job _DlL5TQeRRDG2mMOHWl587A.gms Stop 12/13/25 22:36:10 elapsed 0:00:00.524
+Maximum achievable net profit: 1019924.84
+
+=== Stage 2: Minimizing Covariance with Profit Target ===
+Profit target: 80.0% of maximum = 815939.87
+--- _DlL5TQeRRDG2mMOHWl587A.gms(415) 4 Mb
+--- Job _DlL5TQeRRDG2mMOHWl587A.gms Start 12/13/25 22:36:10 52.2.0 d8e408be WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\Users\USER\AppData\Local\Programs\Python\Python310\Lib\site-packages\gamspy_base\gmsprmNT.txt
+--- GAMS Parameters defined
+    QCP xpress
+    Input C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\_DlL5TQeRRDG2mMOHWl587A.gms
+    Output C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\_DlL5TQeRRDG2mMOHWl587A.lst
+    ScrDir C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\tmpimx0gziy\
+    SysDir C:\Users\USER\AppData\Local\Programs\Python\Python310\Lib\site-packages\gamspy_base\
+    LogOption 3
+    Trace C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\_DlL5TQeRRDG2mMOHWl587A.txt
+    License C:\Users\USER\AppData\Local\Programs\Python\Python310\Lib\site-packages\gamspy_base\gamslice.txt
+    OptFile 0
+    OptDir C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\
+    LimRow 0
+    LimCol 0
+    TraceOpt 3
+    GDX C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\_DlL5TQeRRDG2mMOHWl587Aout.gdx
+    SolPrint 0
+    SolveLink 2
+    PreviousWork 1
+    gdxSymbols newOrChanged
+System information: 10 physical cores and 16 Gb physical memory detected
+--- Starting compilation
+--- _DlL5TQeRRDG2mMOHWl587A.gms(71) 4 Mb
+--- Starting execution: elapsed 0:00:00.043
+--- Generating QCP model min_covariance
+--- _DlL5TQeRRDG2mMOHWl587A.gms(434) 6 Mb
+---   130 rows  237 columns  670 non-zeroes
+---   1,299 nl-code  18 nl-non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 1.000E+00, 4.276E+05] - Zero values observed as well
+--- Bound     [min, max] : [ 8.159E+05, 8.159E+05] - Zero values observed as well
+--- Matrix    [min, max] : [ 5.000E-01, 1.074E+06]
+--- _DlL5TQeRRDG2mMOHWl587A.gms(434) 6 Mb
+--- _DlL5TQeRRDG2mMOHWl587A.gms(434) 4 Mb
+--- Executing XPRESS (Solvelink=2): elapsed 0:00:00.058
+
+    Xpress           52.2.0 d8e408be Dec 8, 2025           WEI x86 64bit/MS Window
+
+... GMO Q Extraction (ThreePass): 0.00s
+... This solver runs with a demo license. No commercial use.
+
+    FICO Xpress v9.8.0, Hyper, solve started 22:36:11, Dec 13, 2025
+    Heap usage: 740KB (peak 740KB, 169KB system)
+    Minimizing QP  using up to 16 threads and up to 15GB memory, with these control settings:
+    MUTEXCALLBACKS = 0
+    MIPADDCUTOFF = 0
+    MIPRELCUTOFF = 0
+    MIPABSSTOP = 0
+    MIPRELSTOP = .0001
+    Original problem has:
+           129 rows          236 cols          651 elements
+           324 qobjelem
+    Presolved problem has:
+            92 rows          234 cols          612 elements
+           324 qobjelem
+    Presolve finished in 0 seconds
+    Heap usage: 779KB (peak 804KB, 169KB system)
+    Coefficient range                    original                 solved        
+      Coefficients   [min,max] : [ 5.00e-01,  9.97e+04] / [ 2.46e-04,  3.99e+00]
+      RHS and bounds [min,max] : [ 1.00e+00,  8.16e+05] / [ 1.00e+00,  5.29e+05]
+      Objective      [min,max] : [      0.0,       0.0] / [      0.0,       0.0]
+      Quadratic      [min,max] : [ 7.88e-05,  3.34e+00] / [ 5.02e-03,  3.71e+00]
+    Autoscaling applied standard scaling
+    Using AVX2 support
+    Cores per CPU (CORESPERCPU): 16
+    Barrier starts after 0 seconds, using up to 16 threads, 10 cores
+    Matrix ordering - Dense cols.:     18   NZ(L):      1451   Flops:        14644
+     
+      Its   P.inf      D.inf      U.inf      Primal obj.     Dual obj.      Compl.
+       0   1.21e+04   5.73e+05   0.00e+00   1.2756331e+11  -3.4340795e+11   5.2e+11
+       1   2.12e+03   3.78e+04   3.64e-12   9.6808752e+10   2.3873508e+10   7.8e+10
+       2   1.59e+03   5.14e+04   2.91e-11   8.6860832e+10   2.8360430e+10   5.4e+10
+       3   6.85e+02   2.21e+04   2.91e-11   6.9712654e+10   5.0616417e+10   2.5e+10
+       4   6.52e+02   2.12e+04   7.28e-12   7.1795825e+10   5.8269776e+10   3.1e+10
+       5   5.71e+02   1.82e+04   2.91e-11   7.4752985e+10   6.8815887e+10   3.3e+10
+       6   5.23e+02   1.67e+04   2.91e-11   7.7478539e+10   7.4345740e+10   3.5e+10
+       7   4.27e+02   1.32e+04   5.82e-11   8.2694640e+10   8.4415299e+10   3.8e+10
+       8   3.37e+02   1.03e+04   5.82e-11   9.1079596e+10   9.0168690e+10   3.8e+10
+       9   2.24e+02   7.26e+03   5.82e-11   9.8291578e+10   9.8999992e+10   3.2e+10
+      10   1.28e+02   4.34e+03   1.46e-11   1.0677470e+11   1.0463615e+11   2.4e+10
+      11   6.55e+01   1.98e+03   2.18e-11   1.1316632e+11   1.0734329e+11   1.9e+10
+      12   1.12e+01   3.38e+02   7.28e-12   1.1522258e+11   1.1266971e+11   4.9e+09
+      13   1.03e-01   3.11e+00   7.28e-12   1.1472159e+11   1.1466850e+11   7.4e+07
+      14   9.65e-05   2.92e-03   1.38e-11   1.1469984e+11   1.1469974e+11   1.2e+05
+    Barrier method finished in 0 seconds
+    Uncrunching matrix
+    Optimal solution found
+    Barrier solved problem
+      14 barrier iterations in 0.02 seconds at time 0
+    Final objective                       : 1.146998438185533e+11
+      Max primal violation      (abs/rel) : 4.807e-02 / 5.213e-07
+      Max dual violation        (abs/rel) : 1.528e-10 / 1.791e-15
+      Max complementarity viol. (abs/rel) : 3.679e+03 / 1.007e-07
+
+... XPRESS stop status: normal (0)
+... XPRESS sol status: optimal (1)
+
+--- Reading solution for model min_covariance
+--- Executing after solve: elapsed 0:00:00.449
+--- _DlL5TQeRRDG2mMOHWl587A.gms(435) 4 Mb
+--- _DlL5TQeRRDG2mMOHWl587A.gms(493) 4 Mb
+--- GDX File C:\Users\USER\AppData\Local\Temp\tmpc6jrn4ey\_DlL5TQeRRDG2mMOHWl587Aout.gdx
+*** Status: Normal completion
+--- Job _DlL5TQeRRDG2mMOHWl587A.gms Stop 12/13/25 22:36:11 elapsed 0:00:00.474
+
+=== Portfolio Summary ===
+                    uni              value
+0          old exposure       3,675,756.00
+1          new exposure       4,555,034.12
+2             cost incr          98,781.15
+3             cost decr          48,541.69
+4                profit         963,262.66
+5            net profit         815,939.82
+6           risk weight       1,669,172.88
+7     risk weight limit       2,277,517.06
+8            covariance 114,699,843,818.55
+9   max possible profit       1,019,924.84
+10             target %              80.00
